@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome to Nareen Zulaikha Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        function snow() {
+            //1, define a snowflake template
+            var flake = $("<div>").css({
+                "position": "absolute",
+                "color": "#fff"
+            }).html("🍃")  ;
+ 
+            //Get the width of the page, use this number to calculate, the value of left when the snowflake starts
+            var documentWidth = $(document).width();
+ 
+            //Get the height of the page, which is equivalent to the position of the Y axis when the snowflakes fall
+            var documentHieght = $(document).height();
+ 
+            //Define the number of milliseconds to generate a snowflake
+            var millisec = 100;
+            //2, set the first timer, a periodic timer, and generate a snowflake every time (millisec);
+            setInterval(function() {
+                //Randomly generate the value of left at the beginning of the snowflake falling, which is equivalent to the position of the X axis at the beginning
+                var startLeft = Math.random() * documentWidth;
+ 
+                //Randomly generate the value of left at the end of snowflake falling, which is equivalent to the position of the X axis at the end
+                var endLeft = Math.random() * documentWidth;
+ 
+                // Randomly generate snowflake size
+                var flakeSize = 5 + 20 * Math.random();
+ 
+                //Randomly generate the falling duration of snowflakes
+                var durationTime = 4000 + 7000 * Math.random();
+ 
+                //Randomly generate the transparency at the beginning of falling snowflakes
+                var startOpacity = 0.7 + 0.3 * Math.random();
+ 
+                //Randomly generate the transparency at the end of falling snowflakes
+                var endOpacity = 0.2 + 0.2 * Math.random();
+ 
+                //3. Clone a snowflake template, define the initial style of the snowflake, and stitch it into the page
+                flake.clone().appendTo($("body")).css({
+                    "left": startLeft,
+                    "opacity": startOpacity,
+                    "font-size": flakeSize,
+                    "top": "-25px",
+                }).animate({ //Execute animation
+                    "left": endLeft,
+                    "opacity": endOpacity,
+                    "top": documentHieght
+                }, durationTime, function() {
+                    //4. When the snowflake falls, delete the snowflake.
+                    $(this).remove(); 
+                });
+            }, millisec);
+        };
+        snow();
+    </script>
+<audio controls autoplay>
+  <source src="music/websitemusic.mp3" type="audio/mpeg">
+</audio>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <p align="center"><img src="images/nazreenprofile.jpg" class="w3-margin w3-circle" alt="Person" style="width:50%"><br><br> </p>
+    <h4><b>MENU</b></h4>
+    <p class="w3-text-grey">by Nazreen © 2022 </p>
+  </div>
+  <div class="w3-bar-block">
+    
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>HOME</a> 
+      <a href="objective.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>OBJECTIVES</a> 
+    <a href="education.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>EDUCATION</a> 
+    <a href="experiences.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>EXPERIENCES</a>
+      <a href="curriculars.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>CURRICULARS</a> 
+    <a href="skills.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>SKILLS</a> 
+       <a href="achievements.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ACHIEVEMENTS</a> 
+    <a href="summary.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>SUMMARY</a>
+    <a href="references.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>REFERENCES</a> 
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+  
+  <div class="w3-panel w3-large">
+    <a href="https://www.facebook.com/nazreen.zulaikha.5/" target="_blank"> <i class="fa fa-facebook-official w3-hover-opacity"></i> </a>
+    <a href="https://www.instagram.com/zulaikhanzrn/"> <i class="fa fa-instagram w3-hover-opacity"></i> </a>
+    <a href="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fwelcome" target="_blank"> <i class="fa fa-snapchat w3-hover-opacity"></i> </a>
+    <a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i> </a>
+    <a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i> </a>
+    <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i> </a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>Objective</b></h1>
+    
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h4><b>My Career Objective </b></h4>
+    <p align="justify">In my career objective, I hope I can gain many new skills to develop myself more and also I hope people around me are willing to give me opportunity for me to learn something new and can guide me in the right path. I stil got so much to learn as my age is still young and does not have much exprience working in this industry. My dreams is to be as successful as I can be with help from people around me. Thank You.</p>
+    <hr>
+    
+    
+    
+  
+  
+ 
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>Thank You</h3>
+      <p> <i> I'm hoping to see you here again. Please come visit anytime. </i> </p>
+   
+    </div>
+  
+    <div class="w3-third">
+      <h3>Facebook</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+           <a href="https://www.facebook.com/nazreen.zulaikha.5/" target="_blank"> <img src="images/facebooklogo.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Nazreen Zulaikha</span><br>
+          <span>Find Me on Facebook!</span> </a>
+        </li>
+         <h3>Instagram</h3>
+        <li class="w3-padding-16">
+          <a href="https://www.instagram.com/zulaikhanzrn/" target="_blank"> <img src="images/instagramlogo.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Nazreen Zulaikha</span><br>
+          <span>Find Me on Instagram</span> </a>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>More</h3>
+      <span> <i>Check out more of my other social media at the end of menu! </i></span>
+      <h5> <b> Popular Tag </b></h5>
+      <p>
+        <a href="https://www.facebook.com/nazreen.zulaikha.5/">  <span class="w3-tag w3-black w3-margin-bottom">resume</span> </a>
+        <span class="w3-tag w3-black w3-margin-bottom">education</span>
+        <span class="w3-tag w3-black w3-margin-bottom">job interview</span>
+        <span class="w3-tag w3-black w3-margin-bottom">social media</span>
+        <span class="w3-tag w3-black w3-margin-bottom">E-mail</span>
+        <span class="w3-tag w3-black w3-margin-bottom">experience</span>
+
+
+
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Copyright by Nazreen © 2022 </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
